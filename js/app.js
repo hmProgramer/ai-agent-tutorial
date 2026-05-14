@@ -7,7 +7,56 @@ const state = {
   currentPage: null,
   sidebarOpen: false,
   searchQuery: '',
+  imageMap: null, // loaded from images.json
 };
+
+// ========== Image Loading ==========
+async function loadImageMap() {
+  try {
+    const resp = await fetch('js/images.json');
+    if (resp.ok) {
+      state.imageMap = await resp.json();
+    }
+  } catch (e) {
+    // Images optional - don't block on failure
+  }
+}
+
+function getIllustrationHTML(pageId) {
+  if (!state.imageMap || !state.imageMap.pages) return '';
+
+  const imgInfo = state.imageMap.pages[pageId];
+  if (!imgInfo) return '';
+
+  return `
+    <div class="article-illustration">
+      <img src="${imgInfo.file}" alt="${imgInfo.title}" loading="lazy">
+      <div class="illustration-caption">${imgInfo.title}</div>
+    </div>`;
+}
+
+function getCategoryIllustrationHTML(pageId) {
+  if (!state.imageMap || !state.imageMap.categories) return '';
+
+  for (const [catName, catInfo] of Object.entries(state.imageMap.categories)) {
+    if (catInfo.displayOn === pageId) {
+      return `
+        <div class="category-illustration">
+          <img src="${catInfo.file}" alt="${catInfo.title}" loading="lazy">
+        </div>`;
+    }
+  }
+  return '';
+}
+
+function getCoverHTML() {
+  if (!state.imageMap || !state.imageMap.cover) return '';
+  const cover = state.imageMap.cover;
+  return `
+    <div class="cover-illustration">
+      <img src="${cover.file}" alt="${cover.title}" loading="eager">
+    </div>`;
+}
 
 // ========== Page Routing ==========
 function getPageId() {
@@ -64,8 +113,18 @@ function renderArticle(page) {
       ${page.next.title} <i class="fas fa-arrow-right"></i>
     </a>` : '<span></span>';
 
+  const isHome = state.currentPage === 'ai-agent-tutorial';
+  const coverHTML = isHome ? getCoverHTML() : '';
+  const catIllustration = getCategoryIllustrationHTML(state.currentPage);
+  const conceptIllustration = getIllustrationHTML(state.currentPage);
+  const learningPath = isHome ? getIllustrationHTML('ai-agent-tutorial') : '';
+
   return `
+    ${coverHTML}
+    ${catIllustration}
     ${page.content}
+    ${conceptIllustration}
+    ${learningPath}
     <div class="page-nav">
       ${prevLink}
       ${nextLink}
@@ -243,10 +302,13 @@ function applyTheme(theme) {
 }
 
 // ========== Init ==========
-function init() {
+async function init() {
   buildSidebar();
   initTheme();
   initSearch();
+
+  // Load image map before first render
+  await loadImageMap();
   renderPage(getPageId());
 
   // Sidebar toggle (mobile)

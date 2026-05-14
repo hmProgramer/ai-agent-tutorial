@@ -1,0 +1,15 @@
+Refined commercial Chinese handdrawn technical article/PPT illustration.
+Complete raster image on very light warm white paper, near #FBFAF5, with extremely subtle grain.
+No full-page border and no rectangular frame.
+Upper-left small page number in handwritten style (omit for cover page).
+Centered medium Chinese title with one pale blue handdrawn underline.
+Small subtitle under title when needed.
+For body pages, keep title size optically consistent across pages; do not enlarge short titles.
+Fine black ink and pencil linework, delicate hatching, stable but slightly irregular.
+Muted pastel marker labels: pale blue #D9E8F6, sage green #DCEAD6, peach #F5DEB8, lavender #E4DCF4.
+Sparse corner construction marks only: faint pale grey grid, dots, ruler ticks, measurement lines.
+Generous negative space, calm premium teaching-note feeling.
+Mostly small object-based diagrams; no more than one tiny person, placed far in a corner.
+Props should be blank or contain only simple line marks unless their text appears in Required text only.
+Match the approved article-illustration shell: near-white warm paper, no full-page border, upper-left small page number, centered restrained handwritten Chinese title, one pale blue underline, small subtitle beneath, sparse corner grid/dot construction marks, fine ink-and-pencil object drawings with delicate hatching, small refined central diagram, and large negative space. Keep the outer shell consistent across pages; only vary the central diagram layout according to the content.
+Avoid full-page border, yellow paper, beige paper, giant fonts, cheap poster look, childish doodles, many characters, thick marker strokes, dense bullets, corporate template style, shadows, gradients, neon, watermark, gibberish text, English filler, large colorful cards, heavy bottom quote boxes, oversized body-page title, extra text, invented micro-labels, crowded composition.

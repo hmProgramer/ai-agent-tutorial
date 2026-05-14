@@ -519,6 +519,52 @@ img {
   }
 }
 
+/* ========== Article Illustrations ========== */
+.article-illustration {
+  margin: 32px auto;
+  text-align: center;
+  max-width: 100%;
+}
+
+.article-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.article-illustration .illustration-caption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.cover-illustration {
+  margin: 0 auto 32px;
+  text-align: center;
+  max-width: 100%;
+  position: relative;
+}
+
+.cover-illustration img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Category header illustration - slightly smaller */
+.category-illustration {
+  margin: 16px auto 28px;
+  text-align: center;
+  max-width: 85%;
+}
+
+.category-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 /* ========== Print ========== */
 @media print {
   .sidebar, .header, .footer, .page-nav {

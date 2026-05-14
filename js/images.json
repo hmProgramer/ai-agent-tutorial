@@ -1,0 +1,73 @@
+{
+  "cover": {
+    "file": "images/01-cover-ai-agent-tutorial.png",
+    "title": "AI Agent 智能体教程",
+    "width": 2520,
+    "height": 1080,
+    "ratio": "21:9"
+  },
+  "categories": {
+    "基础与原理": {
+      "file": "images/02-category-fundamentals.png",
+      "title": "基础与原理",
+      "displayOn": "ai-agent-tutorial"
+    },
+    "智能体工具": {
+      "file": "images/03-category-tools.png",
+      "title": "智能体工具",
+      "displayOn": "first-ai-agent"
+    },
+    "Vibe Coding": {
+      "file": "images/04-category-vibecoding.png",
+      "title": "Vibe Coding",
+      "displayOn": "claude-code"
+    },
+    "Python 实现智能体": {
+      "file": "images/05-category-python.png",
+      "title": "Python 实现智能体",
+      "displayOn": "python-ai-agent"
+    }
+  },
+  "pages": {
+    "ai-agent-core": {
+      "file": "images/06-agent-core-formula.png",
+      "title": "Agent 核心公式",
+      "position": "after-h1"
+    },
+    "ai-agent-working-principle": {
+      "file": "images/08-agent-loop-react.png",
+      "title": "Agent 运行循环",
+      "position": "after-h1"
+    },
+    "ai-architecture": {
+      "file": "images/07-ai-architecture-layers.png",
+      "title": "AI 底层架构",
+      "position": "after-h1"
+    },
+    "retrieval-augmented-generation": {
+      "file": "images/09-rag-workflow.png",
+      "title": "RAG 工作流程",
+      "position": "after-h1"
+    },
+    "ai-agent-function-calling": {
+      "file": "images/10-function-calling.png",
+      "title": "Function Calling 机制",
+      "position": "after-h1"
+    },
+    "ai-agent-memory-system-design": {
+      "file": "images/11-memory-system.png",
+      "title": "记忆系统架构",
+      "position": "after-h1"
+    },
+    "multi-agent-system": {
+      "file": "images/12-multi-agent-system.png",
+      "title": "多智能体系统",
+      "position": "after-h1"
+    },
+    "ai-agent-tutorial": {
+      "file": "images/13-learning-path.png",
+      "title": "AI Agent 学习路径",
+      "position": "before-footer"
+    }
+  }
+}
